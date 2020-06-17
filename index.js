@@ -1,5 +1,6 @@
 body = document.querySelector('body')
 h1 = document.querySelector('h1')
+button = document.querySelector('button')
 randomRgb1 = Math.floor(Math.random()*255)
 randomRgb2 = Math.floor(Math.random()*255)
 randomRgb3 = Math.floor(Math.random()*255)
@@ -12,3 +13,10 @@ oppoRgb2 = 255-randomRgb2;
 oppoRgb3 = 255-randomRgb3;
 
 h1.style.color = `rgb(${oppoRgb1},${oppoRgb2},${oppoRgb3})`
+button.addEventListener('click',()=>{
+  refreshPage()
+})
+
+function refreshPage(){
+    window.location.reload();
+} 
